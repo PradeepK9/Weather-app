@@ -35,7 +35,7 @@ export const fetchForecastData = (query) => async (dispatch) => {
   dispatch(fetchForecastStart());
   try {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${query}&units=metric&appid=268ce3fb1dde9edbc8fc660ac0a58e3f`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${query}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
     );
     console.log("Weather Forecast => ", response.data.list);
     dispatch(fetchForecastSuccess(response.data.list));

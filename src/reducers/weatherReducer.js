@@ -32,8 +32,9 @@ export const { fetchWeatherStart, fetchWeatherSuccess, fetchWeatherFailure } =
 export const fetchWeatherData = (query) => async (dispatch) => {
   dispatch(fetchWeatherStart());
   try {
+    console.log("Key => ", process.env.REACT_APP_WEATHER_API_KEY);
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=268ce3fb1dde9edbc8fc660ac0a58e3f`
+      `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
     );
     console.log("Current Weather => ", response.data);
     dispatch(fetchWeatherSuccess(response.data));
