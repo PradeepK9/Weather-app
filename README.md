@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Clone Repository
+
+### `git clone https://github.com/PradeepK9/Weather-app.git`
+
+## install dependencies
+
+### `yarn install`
+
 ## Available Scripts
 
 In the project directory, you can run:
